@@ -1,0 +1,33 @@
+.sidebar{
+    background-color: cornflowerblue;
+}
+
+.dash-icon{
+    width: 50px;
+}
+
+.icon, .sidebar-icon{
+    width: 25px;
+}
+
+.sidebar-icon, .dash-icon{
+    fill: white;
+}
+
+.header-top .main-image{
+    width: 80px;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.header-bottom .main-image{
+    width: 100px;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.user img{
+    width: 50px;
+    height: 100%;
+    border-radius: 100%;
+}
