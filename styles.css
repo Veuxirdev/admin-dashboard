@@ -1,3 +1,13 @@
+body{
+    margin: 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100vh;
+}
+
 .sidebar{
     display: flex;
     flex-direction: column;
@@ -5,6 +15,7 @@
     background-color: cornflowerblue;
     color: white;
     padding: 16px 24px 16px 24px;
+    grid-row: span 3;
 }
 .sidebar ul{
     display: flex;
@@ -30,7 +41,7 @@
 
 .sidebar ul li a, .sidebar div{
     display: grid;
-    grid-template-columns: 50px min-content;
+    grid-template-columns: 60px min-content;
     align-items: center;
     gap: 16px;
 }
@@ -40,19 +51,21 @@
 }
 
 .sidebar span{
-    font-size: 24px;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .sidebar h1{
     margin: 0;
+    font-size: 2.3rem;
 }
 
 .dash-icon{
-    width: 50px;
+    width: 60px;
 }
 
 .icon, .sidebar-icon{
-    width: 25px;
+    width: 32px;
 }
 
 .sidebar-icon, .dash-icon{
@@ -61,11 +74,12 @@
 
 .header{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 16px 60px 16px 60px;
     align-items: center;
     background-color: rebeccapurple;
     gap: 18px;
+    grid-column: span 2;
 }
 
 .header .search{
@@ -76,8 +90,8 @@
 
 .header .search input{
     border-radius: 20px;
-    font-size: 18px;
-    padding:5px;
+    font-size: 1.2rem;
+    padding: 10px 30px 10px 30px;
     border: none;
     background-color: #d4d4d4;
     outline: none;
@@ -96,8 +110,9 @@
 }
 
 .header .alerts p{
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
+    margin: 0;
 }
 
 .header .alerts .main-image{
@@ -107,28 +122,24 @@
 
 .header .welcome{
     display: grid;
-    grid-template-columns: 126px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
 }
 
 .header .welcome p {
     font-weight: bold;
     margin: 0;
+    font-size: 1.7rem;
 }
 
-.header .welcome img + p{
-    font-size: 16px;
-    align-self: flex-end;
-}
-
-.header .welcome img + p + p{
-    font-size: 28px;
-    margin: 0;
-    align-self: flex-start;
+.header .welcome p span{
+    display: block;
+    font-size: 1rem;
 }
 
 .header .welcome .main-image{
-    width: 100px;
+    width: 76px;
     border-radius: 100%;
     grid-row: span 2;
     justify-self: flex-start;
@@ -157,6 +168,95 @@
 
 .header .btns button:active{
     background-color: lightskyblue;
+}
+
+.projects{
+    grid-row: span 2;
+    padding: 24px;
+}
+
+.projects h2{
+    margin-top: 0px;
+}
+
+.projects .card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+}
+
+.card-container .card{
+    display: grid;
+    grid-template-rows: min-content 2fr min-content;
+    height: max(200px);
+    background-color: cyan;
+    padding: 28px 36px 28px 36px;
+    border-left: 8px solid yellow;
+    border-radius: 7px;
+}
+
+.card-container .card *{
+    margin: 0;
+}
+
+.card-container .card .actions{
+    display: flex;
+    justify-content: flex-end;
+    gap:24px;
+}
+
+.announcements{
+    padding: 24px 24px 24px 0px;
+}
+
+.announcements h2{
+    margin-top: 0;
+}
+
+.announcements h3, .announcements p{
+    margin: 0;
+}
+
+.announcements .info-container{
+    background-color: blanchedalmond;
+    padding: 36px;
+    border-radius: 10px;
+}
+
+.trending{
+    padding: 0px 24px 24px 0px;
+}
+
+.trending h2{
+    margin-top: 0;
+}
+
+.trending .users{
+    background: lightgreen;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.trending .users{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trending .users *{
+    margin:0;
+}
+
+.trending .user{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.trending .user p span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .user img{
