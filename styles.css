@@ -1,5 +1,46 @@
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     background-color: cornflowerblue;
+    color: white;
+    padding: 16px 24px 16px 24px;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar ul li{
+    width: min-content;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar ul li a, .sidebar div{
+    display: grid;
+    grid-template-columns: 50px min-content;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar svg{
+    justify-self: center;
+}
+
+.sidebar span{
+    font-size: 24px;
+}
+
+.sidebar h1{
+    margin: 0;
 }
 
 .dash-icon{
