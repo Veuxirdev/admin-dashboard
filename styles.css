@@ -24,6 +24,10 @@
     color: white;
 }
 
+.sidebar a:active{
+    color:black
+}
+
 .sidebar ul li a, .sidebar div{
     display: grid;
     grid-template-columns: 50px min-content;
@@ -55,16 +59,104 @@
     fill: white;
 }
 
-.header-top .main-image{
-    width: 80px;
-    height: 100%;
+.header{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 16px 60px 16px 60px;
+    align-items: center;
+    background-color: rebeccapurple;
+    gap: 18px;
+}
+
+.header .search{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header .search input{
+    border-radius: 20px;
+    font-size: 18px;
+    padding:5px;
+    border: none;
+    background-color: #d4d4d4;
+    outline: none;
+    flex:1;
+}
+
+.header .search input:focus::placeholder{
+    color:transparent;
+}
+
+.header .alerts{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:26px;
+}
+
+.header .alerts p{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .alerts .main-image{
+    width: 50px;
     border-radius: 100%;
 }
 
-.header-bottom .main-image{
+.header .welcome{
+    display: grid;
+    grid-template-columns: 126px 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header .welcome p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.header .welcome img + p{
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.header .welcome img + p + p{
+    font-size: 28px;
+    margin: 0;
+    align-self: flex-start;
+}
+
+.header .welcome .main-image{
     width: 100px;
-    height: 100%;
     border-radius: 100%;
+    grid-row: span 2;
+    justify-self: flex-start;
+}
+
+.header .btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .btns button{
+    border-radius: 30px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    height: 42px;
+}
+
+.header .btns button:hover{
+    cursor: pointer;
+}
+
+.header .btns button:active{
+    background-color: lightskyblue;
 }
 
 .user img{
