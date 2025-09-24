@@ -1,18 +1,19 @@
 body{
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    height: 100vh;
+    background-color: rgb(220, 220, 230);
 }
 
 .sidebar{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color: cornflowerblue;
+    background-color: #37353E;
     color: white;
     padding: 16px 24px 16px 24px;
     grid-row: span 3;
@@ -77,9 +78,14 @@ body{
     grid-template-columns: 2fr 1fr;
     padding: 16px 60px 16px 60px;
     align-items: center;
-    background-color: rebeccapurple;
+    background-color: rgb(94, 92, 109);
     gap: 18px;
     grid-column: span 2;
+    color: white;
+}
+
+.header .icon{
+    fill: white;
 }
 
 .header .search{
@@ -93,7 +99,7 @@ body{
     font-size: 1.2rem;
     padding: 10px 30px 10px 30px;
     border: none;
-    background-color: #d4d4d4;
+    background-color: #F5F5F5;
     outline: none;
     flex:1;
 }
@@ -154,12 +160,13 @@ body{
 .header .btns button{
     border-radius: 30px;
     border: none;
-    background-color: cornflowerblue;
+    background-color: #37353E;
     color: white;
     font-size: 18px;
     font-weight: bold;
     width: 100px;
     height: 42px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .header .btns button:hover{
@@ -167,7 +174,7 @@ body{
 }
 
 .header .btns button:active{
-    background-color: lightskyblue;
+    background-color: #18171b;
 }
 
 .projects{
@@ -189,9 +196,10 @@ body{
     display: grid;
     grid-template-rows: min-content 2fr min-content;
     height: max(200px);
-    background-color: cyan;
+    background-color: white;
+    box-shadow: 5px 5px 5px #00000025;
     padding: 28px 36px 28px 36px;
-    border-left: 8px solid yellow;
+    border-left: 8px solid #2D336B;
     border-radius: 7px;
 }
 
@@ -218,7 +226,8 @@ body{
 }
 
 .announcements .info-container{
-    background-color: blanchedalmond;
+    background-color: white;
+    box-shadow: 5px 5px 5px #00000025;
     padding: 36px;
     border-radius: 10px;
 }
@@ -232,7 +241,8 @@ body{
 }
 
 .trending .users{
-    background: lightgreen;
+    background: white;
+    box-shadow: 5px 5px 5px #00000025;
     border-radius: 10px;
     padding: 24px;
 }
